@@ -5,7 +5,7 @@ function Form({ handleNewGuess, gameEnded }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log({ tentativeGuess });
+    console.log({ guess: tentativeGuess });
     handleNewGuess(tentativeGuess);
     setTentativeGuess('');
   }
@@ -25,7 +25,7 @@ function Form({ handleNewGuess, gameEnded }) {
         minLength={5}
         maxLength={5}
         value={tentativeGuess}
-        onChange={event => setTentativeGuess(event.target.value.toUpperCase())}
+        onChange={(event) => setTentativeGuess(event.target.value.toUpperCase())}
       />
     </form>
   );

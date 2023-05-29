@@ -2,7 +2,7 @@ import React from "react";
 
 function Key({ status, children }) {
   return (
-    <div className={`${status} key`}>
+    <div className={`key ${status}`}>
       {children}
     </div>
   );
